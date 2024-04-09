@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import './reset';
+
+*{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
+.full-width-container {
+
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1170px;
+    height: inherit;
+}
+
+.header {
+
+    &__wrapper {
+    }
+
+    &__top-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+        margin-bottom: 14px;
+    }
+
+    &__logo-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__logo {
+        width: 223px;
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 133%;
+        color: #2B364C;
+        max-width: 262px;
+    }
+
+    &__phone-icon {
+        width: 22px;
+        height: 22px;
+        margin-right: 10px;
+    }
+
+    &__phone {
+        font-weight: 400;
+        font-size: 15px;
+        color: #2B364C;
+    }
+
+    &__devider {
+        width: 100%;
+        height: 1px;
+        background: #cfcfcf;
+        margin-bottom: 20px;
+    }
+
+    &__menu-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    &__menu-item {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 120%;
+        text-align: center;
+        color: #2B364C;
+        padding: 7px 15px;
+        border-radius: 100px;
+        transition: background-color .2s ease-in;
+
+        &:hover {
+            background: #f0f0f0;
+            color: #2B364C;
+        }
+
+        &_active {
+            background-color: #2B364C !important;
+            color: #fff !important;
+        }
+    }
+
+    &__menu-item-all-wrapper {
+    }
+
+    &__menu-item-all {
+        min-width: 137px;
+    }
+
+    &__menu-item-all-arrow {
+        margin-left: 8px;
+    }
+
+
+    &__submenu-wrapper {
+        padding-top: 10px;
+        position: relative;
+    }
+    &__submenu {
+        position: absolute;
+        width: max-content;
+        border-radius: 15px;
+        background: #2B364C;
+        box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease;
+
+    }
+
+    &__menu-item-all-wrapper:hover &__submenu {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__submenu-item-wrapper {
+        display: block;
+        padding: 7px 20px 7px 15px;
+        border-bottom: 1px solid #404f6c;
+
+        &:hover {
+            background-color: #404F6C;
+        }
+        &:first-child {
+            padding-top: 15px;
+            border-radius: 15px 15px 0 0;
+        }
+        &:last-child {
+            border-bottom: unset;
+            padding-bottom: 20px;
+            border-radius: 0 0 15px 15px;
+        }
+    }
+
+    &__submenu-item {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 120%;
+        color: #fff;
+    }
+}
+
+
+.mobile-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0px;
+    min-height: 100vh;
+    background-color: #2B364C;
+    transition: width .7s ease;
+    &__wrapper {
+        padding: 20px 20px;
+    }
+    &_show {
+        width: 320px;
+        height: unset;
+        visibility: visible;
+    }
+    &__burger {
+        display: none;
+        align-items: center;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    &__burger-icon {
+        width: 22px;
+        height: 22px; 
+    }
+    
+    &__top-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        gap: 30px;
+    }
+
+    &__phone {
+        font-weight: 400;
+        font-size: 12px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        min-width: max-content;
+    }
+
+    &__phone-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    &__burger-close {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 3px;
+        font-weight: 400;
+        font-size: 10px;
+        text-align: center;
+        color: #fff;
+    }
+
+    &__burger-close-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    &__devider {
+        height: 1px;
+        width: 100%;
+        background: #3f4e6c;
+        margin-bottom: 30px;
+    }
+
+    &__nav-items {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    &__menu-item {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 120%;
+        color: #fff;
+        margin-bottom: 18px;
+        min-width: max-content;
+    }
+}
+
+
+
+@media (max-width: 1170px) {
+    .container {
+        padding: 0 50px;
+    }
+    .header {
+        &__phone {
+            display: none;
+        }
+
+        &__devider {
+            display: none;
+        }
+
+        &__menu-wrapper {
+            display: none;
+        }
+
+        &__logo {
+            min-width: 101px;
+        }
+
+    }
+    
+    .mobile-header {
+        &__burger {
+            display: flex;
+            font-weight: 400;
+            font-size: 12px;
+            text-align: center;
+            color: #404040;
+        }
+
+    }
+}
+
+@media (max-width: 960px) {
+    .header {
+        &__logo {
+            width: 150px;
+            min-width: 150px;
+        }
+
+        &__description {
+            font-size: 13px;
+        }
+
+        &__logo-wrapper {
+            gap: 13px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .header {
+        &__description {
+            font-size: 11px;
+            width: 185px;
+        }
+
+        &__top-wrapper {
+            gap: 10px;
+        }
+
+        &__logo {
+            width: 120px;
+            min-width: 120px;
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    .header {
+        &__description {
+            font-size: 8px;
+            width: 145px;
+        }
+
+        &__logo {
+            min-width: 101px;
+            width: 101px;
+        }
+
+        &__top-wrapper {
+            gap: 0;
+        }
+
+        &__logo-wrapper {
+            gap: 10px;
+        }
+    }
+
+    .mobile-header {
+
+        &_show {
+            width: 100vw;
+        }
+        &__burger {
+            font-size: 10px;
+        }
+    
+        &__burger-icon {
+            width: 16px;
+            height: 16px;
+        }   
+    }
+}
