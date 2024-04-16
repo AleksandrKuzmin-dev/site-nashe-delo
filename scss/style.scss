@@ -181,6 +181,14 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
         margin-left: 8px;
     }
 
+    &__menu-item-all-arrow path {
+        stroke: #2B364C;
+    }
+
+    &__menu-item_active &__menu-item-all-arrow path{
+        stroke: #FFF;
+    }
+
 
     &__submenu-wrapper {
         padding-top: 10px;
@@ -888,6 +896,392 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
 
 
 
+/* Страница СКУД */
+
+.total-fp {
+    background-image: linear-gradient(-270deg, rgba(43, 54, 76, 1) 0%, rgba(43, 54, 76, 1) 30%, rgba(43, 54, 76, .4) 100%), url(../img/skud-first-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 65%;
+    margin-bottom: 70px;
+
+    &__wrapper {
+        padding: 83px 0;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 44px;
+        color: #fff;
+        margin-bottom: 10px;
+
+        &_gray {
+            color: #C0C2C9;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__list-item-icon-wrapper {
+        border-radius: 2px;
+        width: 30px;
+        height: 30px;
+        background: radial-gradient(76.67% 76.67% at 44.63% 50%, rgb(255, 255, 255) 0%, rgb(216, 216, 216) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    &__list-item-icon {
+    }
+
+    &__list-item-text {
+        font-weight: 500;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    &__btn {
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #fff;
+        border-radius: 100px;
+        transition: background-color .3s ease;
+
+        &:hover {
+            background-color: #dcdcdc;
+        }
+    }
+
+    &__btn-icon {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+    }
+}
+
+.total-objects {
+    background-image: url(../img/skud-total-objects-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    padding-bottom: 70px;
+
+    &__wrapper {
+        padding: 70px 0;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        text-align: left;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 50px;
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__card-img {
+        border-radius: 10px;
+    }
+
+
+    &__card-name {
+        font-weight: 400;
+        font-size: 18px;
+        text-align: center;
+        color: #2B364C;
+    }
+}
+
+
+
+.skud-why-implement {
+    padding: 70px 0;
+    background: linear-gradient(90deg, #2b364c 0%, #242424 100%);
+
+    &__wrapper {
+
+    }
+
+    &__title {
+        color: #fff;
+        margin-bottom: 70px;
+        &_gray {
+            color: #C0C2C9;
+        }
+    }
+
+    &__cards-wrapper {
+        display: grid;
+        grid-template-columns: 500px 1fr;
+        gap: 13px;
+        margin-bottom: 50px;
+    }
+
+    &__cards {
+        
+
+    }
+
+    &__card-title {
+        padding: 15px 35px 15px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #292f3c;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        border-image: linear-gradient(90deg, #fff 0%, #5F6063 100%);
+        border-image-slice: 1;
+        width: 100%;
+        text-align: left;
+    }
+
+    &__card-title-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 178%;
+        color: #fff;
+    }
+
+    &__card-btn {
+        background-image: url('../img/skud-cards-plus.svg');
+        width: 28px;
+        height: 28px;
+        transition: background-image .4s ease;
+        
+    }
+
+    &__card-title_active &__card-btn {
+        background-image: url('../img/skud-cards-minus.svg');
+    }
+
+    &__card-content {
+        border: 1px solid #fff;
+        border-image: linear-gradient(90deg, #fff 0%, #5F6063 100%);
+        padding: 15px 20px;
+        border-image-slice: 1;
+        min-height: 408px;
+
+        font-size: 18px;
+        line-height: 156%;
+        color: #fff;
+    }
+
+    &__mob-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 50px;
+        display: none;
+    }
+
+    &__mob-card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__mob-card-title-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 10px 13px 10px 10px;
+        width: 100%;
+        background-color: #292f3c;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        border-image: linear-gradient(90deg, #fff 0%, #5F6063 100%);
+        border-image-slice: 1;
+       
+    }
+
+    &__mob-card-title {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 178%;
+        color: #fff;
+        text-align: left;
+    }
+
+    &__mob-card-icon {
+        background-image: url('../img/skud-cards-plus.svg');
+        width: 28px;
+        height: 28px;
+        transition: background-image .4s ease;
+        flex-shrink: 0;
+    }
+
+    &__mob-card-title-wrapper_active &__mob-card-icon {
+        background-image: url('../img/skud-cards-minus.svg');
+    }
+
+    &__mob-card-content {
+        background-color: #292f3c;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 156%;
+        color: #fff;
+        height: 0px;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 1s ease;
+
+    }
+
+    &__mob-card-title-wrapper_active + &__mob-card-content {
+        height: 100%;
+        padding: 10px;
+        border: 1px solid #fff;
+        border-image: linear-gradient(90deg, #fff 0%, #5F6063 100%);
+        border-image-slice: 1;
+        opacity: 1;
+    }
+}
+
+
+.skud-whyus .whyus {
+    &__bg {
+        background-image: url('../img/skud-whyus-bg.jpg');
+    }
+
+    &__title {
+        color: #2B364C;
+        &_gray {
+            color: #AAACB1;
+        }
+    }
+
+    &__card {
+        color: #2B364C;
+    }
+
+    &__card-icon path {
+        stroke: #2B364C;
+    }
+
+    &__card-icon circle{
+        stroke: #2B364C;
+    }
+}
+
+
+.works {
+
+    &__bg {
+        background-image: url(../img/works__bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 65%;
+        padding: 70px 0;
+    }
+
+    &__title {
+        color: #fff;
+        margin-bottom: 40px;
+
+        &_gray {
+            color: #C0C2C9;
+        }
+    }
+
+    &__splide {
+    }
+
+    &__track {
+    }
+
+    &__list {
+    }
+
+    &__slide {
+        padding: 0 10px;
+    }
+
+    &__slide-wrapper {
+    }
+
+    &__slide-img {
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__slide-text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        color: #fff;
+    }
+
+}
+
+
+.works .slider {
+
+    &__arrows {
+        padding-top: 40px;
+
+    }
+
+    &__arrow {
+        background-color: unset;
+    }
+
+    &__arrow-icon path{
+        stroke: #FFF;
+    }
+    &__arrow:hover {
+        background-color: #495266;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1170px) {
     .container {
@@ -977,6 +1371,16 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
             text-align: center;
         }
     }
+
+    .skud-why-implement {
+        &__cards-wrapper {
+            display: none;
+        }
+
+        &__mob-cards {
+            display: flex;
+        }
+    }
 }
 
 @media (max-width: 960px) {
@@ -1031,6 +1435,36 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
 
         &__card {
             width: 300px;
+        }
+    }
+
+    .total-fp {
+        &__title {
+            font-size: 40px;
+        }
+
+        &__subtitle {
+            font-size: 22px;
+        }
+    }
+
+    .total-objects {
+        &__cards {
+            row-gap: 30px;
+        }
+    }
+
+    .skud-why-implement {
+        &__cards-wrapper {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 790px) {
+    .total-objects {
+        &__cards {
+            grid-template-columns: 1fr 1fr;     
         }
     }
 }
@@ -1135,6 +1569,26 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
             width: 160px;
         }
     }
+
+    .total-fp {
+        &__title {
+            font-size: 32px;
+        }
+
+        &__subtitle {
+            font-size: 18px;
+        }
+    }
+
+    .total-objects {
+        &__card-name {
+            font-size: 16px;
+        }
+        &__cards {
+            column-gap: 15px;
+            row-gap: 20px;
+        }
+    }
 }
 
 
@@ -1196,6 +1650,38 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
     .feedback-form {
         &__title {
             font-size: 24px;
+        }
+    }
+
+    .total-fp {
+        &__list-item-text {
+            font-size: 16px;
+        }
+        &__subtitle {
+            margin-bottom: 20px;
+        }
+    }
+
+    .skud-why-implement {
+        &__mob-card-title-wrapper {
+        }
+        &__mob-card-title {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 171%;
+            color: #fff;
+
+        }
+
+        &__mob-card-content {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 171%;
+            color: #fff;
+        }
+
+        &__mob-cards {
+            gap: 7px;
         }
     }
 }

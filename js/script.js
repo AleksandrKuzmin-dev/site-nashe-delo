@@ -127,6 +127,16 @@ function setZoomGallery(imgSelector) {
     })   
 }
 
+function setDropDownCards(tabsSelector, activeTabSelector) {
+    const tabsElements = document.querySelectorAll(tabsSelector)
+
+    tabsElements.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle(activeTabSelector.replace(/[.]/g, ''))
+        });
+    });
+};
+
 SmoothScroll({
     // Время скролла 400 = 0.4 секунды
     animationTime    : 800,
