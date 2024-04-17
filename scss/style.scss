@@ -1271,6 +1271,139 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
     }
 }
 
+.videonabludenie .total-fp {
+
+    background-image: linear-gradient(-270deg, rgba(43, 54, 76, 1) 0%, rgba(43, 54, 76, 0) 70%, rgba(43, 54, 76, 0) 100%), url(../img/videonabludenie-bg.jpg);
+    position: relative;
+    margin-bottom: 0;
+
+    &__wrapper {
+        padding: 100px 0;
+        z-index: 1;
+        position: relative;
+    }
+    &__camera {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 600px;
+        z-index: 0;
+    }
+    
+    &__title {
+        margin-bottom: 30px;
+        max-width: 815px;
+    }
+}
+
+
+.video-system {
+    background-image: url(../img/videonabludenie-system-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 65%;
+
+    &__wrapper {
+        padding: 80px 0;
+    }
+
+    &__title {
+        max-width: 476px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 73px;
+    }
+
+    &__cards {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        row-gap: 50px;
+        justify-content: center;
+    }
+
+    &__card {
+        max-width: 30%;
+        position: relative;
+    }
+
+    &__card-number {
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 48%;
+        text-align: center;
+        color: #ededed;
+        position: absolute;
+        top: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        
+    }
+
+    &__card-img {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 25px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    &__card-text {
+        font-weight: 400;
+        font-size: 24px;
+        text-align: center;
+        color: #2B364C;
+    }
+}
+
+.videonabludenie .whyus {
+    &__bg {
+        background-image: url(../img/videonabludenie-whyus-bg.png);
+    }
+}
+
+
+.online-view {
+    background-image: url(../img/videonabludenie-online-view__bg.jpg);
+
+    &__wrapper {
+        padding: 90px 0 70px 0;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 54px;
+        margin-bottom: 50px;
+    }
+
+    &__title-wrapper {
+    }
+
+    &__marker {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 129%;
+        color: #616161;
+
+        background: #f0f0f0;
+        border-radius: 100px;
+        display: inline-block;
+        padding: 7px 15px;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        text-align: left;
+    }
+
+    &__img {
+        border-radius: 10px;
+    }
+}
 
 
 
@@ -1281,6 +1414,16 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
 
 
 
+
+
+
+@media (max-width: 1300px) {
+    .videonabludenie .total-fp {
+        &__camera {
+            width: 400px;
+        }
+    }
+}
 
 
 @media (max-width: 1170px) {
@@ -1381,6 +1524,12 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
             display: flex;
         }
     }
+
+    .video-system {
+        &__card-text {
+            font-size: 18px;
+        }
+    }
 }
 
 @media (max-width: 960px) {
@@ -1459,12 +1608,38 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
             display: none;
         }
     }
+
+    .videonabludenie .total-fp {
+        &__camera {
+            width: 250px;
+        }
+    }
 }
 
 @media (max-width: 790px) {
     .total-objects {
         &__cards {
             grid-template-columns: 1fr 1fr;     
+        }
+    }
+
+    .video-system {
+        &__card {
+            width: 40%;
+            max-width: unset;
+        }
+        &__card-text {
+            font-size: 16px;
+        }
+        &__card-img {
+            margin-bottom: 15px;
+        }
+    }
+
+    .whyus {
+        &__card {
+            font-size: 16px;
+            gap: 12px;
         }
     }
 }
@@ -1538,11 +1713,7 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
         }
     }
 
-    .whyus {
-        &__card {
-            font-size: 18px;
-        }
-    }
+
 
     .main-trust {
         &__card-wrapper {
@@ -1587,6 +1758,30 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
         &__cards {
             column-gap: 15px;
             row-gap: 20px;
+        }
+    }
+
+    .online-view {
+        &__content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            
+        }
+
+        &__img {
+            max-width: 240px;
+            margin: 0 auto;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__marker {
+            margin: 0 auto 20px auto;
+            display: block;
+            width: max-content;
+            margin-bottom: 12px;
         }
     }
 }
@@ -1682,6 +1877,29 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
 
         &__mob-cards {
             gap: 7px;
+        }
+    }
+
+    .videonabludenie .total-fp {
+        &__title {
+            margin-bottom: 30px;
+            max-width: 815px;
+            font-size: 28px;
+        }
+    }
+
+    .video-system {
+        &__cards {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 70px;
+        }
+        &__card {
+            width: unset;
+            text-align: center;
+        }
+        &__title {
+            margin-bottom: 50px;
         }
     }
 }
