@@ -161,6 +161,7 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
         padding: 7px 15px;
         border-radius: 100px;
         transition: background-color .2s ease-in;
+        margin-bottom: 10px;
 
         &:hover {
             background: #f0f0f0;
@@ -191,7 +192,6 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
 
 
     &__submenu-wrapper {
-        padding-top: 10px;
         position: relative;
     }
     &__submenu {
@@ -206,6 +206,7 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
         z-index: 100;
 
     }
+    
 
     &__menu-item-all-wrapper:hover &__submenu {
         visibility: visible;
@@ -1922,6 +1923,7 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
         padding: 20px 45px 20px 20px;
         background: #ebebeb;
         border-radius: 10px;
+        max-width: 870px;
     }
 
     &__card-number {
@@ -1967,8 +1969,130 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
     }
 }
 
+.electro .total-fp {
+    background-image: linear-gradient(-270deg, rgb(43, 54, 76) 0%, rgb(43, 54, 76) 50%, rgba(43, 54, 76, 0.5) 100%), url('../img/electro-total-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90%;
+    margin-bottom: 0;
+
+    &__title {
+        max-width: 840px;
+        margin-bottom: 38px;
+    }
+}
 
 
+.laying-objects {
+
+    &__wrapper {
+        padding: 70px 0;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: center;
+        column-gap: 30px;
+        row-gap: 54px;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        width: 30%;
+    }
+
+    &__card-img {
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    &__card-text {
+        font-weight: 400;
+        font-size: 18px;
+        text-align: center;
+        color: #2B364C;
+    }
+}
+
+.electro-engineering {
+
+    &__wrapper {
+        padding: 0 0 70px 0;
+    }
+
+    &__title {
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    &__content {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 470px 1fr;
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__card {
+        border-radius: 5px;
+        background: #f3f3f3;
+        padding: 20px;
+    }
+
+    &__card-title {
+        font-weight: 600;
+        font-size: 18px;
+        color: #2B364C;
+    }
+
+    &__card-list {
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__card-list-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    &__card-list-circle {
+        min-width: 20px;
+        min-height: 20px;
+        border-radius: 100%;
+        background-color: #2B364C;
+    }
+
+    &__card-list-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 156%;
+        color: #000;
+        margin-top: -5px;
+        
+    }
+
+    &__img {
+        border-radius: 10px;
+    }
+}
+
+.electro-total-bg {
+    background-image: url('../img/electro-bg-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
 
 
 
@@ -2279,6 +2403,27 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
             font-size: 20px;
         }
     }
+
+    .laying-objects {
+        &__card-text {
+            font-size: 16px;
+        }
+    }
+
+    .electro-engineering {
+        &__content {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        &__img {
+            max-width: 400px;
+        }
+
+        &__title {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 @media (max-width: 790px) {
@@ -2313,6 +2458,20 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
             &_7 {
                 grid-column: 1;
             }
+        }
+    }
+
+    .laying-objects {
+        &__cards {
+            column-gap: 10px;
+            row-gap: 40px;
+        }
+        &__card {
+            width: 45%;
+        }
+
+        &__title {
+            margin-bottom: 30px;
         }
     }
 }
@@ -2567,6 +2726,12 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
             font-size: 16px;
         }
     }
+
+    .electro-engineering {
+        &__card-list-text {
+            font-size: 16px;
+        }
+    }
 }
 
 
@@ -2715,6 +2880,13 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
 
     .sks .total-fp {
     
+        &__title {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .electro .total-fp {
         &__title {
             font-size: 28px;
             margin-bottom: 30px;
