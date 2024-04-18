@@ -2145,6 +2145,39 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
     }
 }
 
+.contacts {
+
+    &__wrapper {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+
+    &__title {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__map {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}
+
+
+
 
 
 
@@ -2470,6 +2503,12 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
             font-size: 20px;
         }
     }
+
+    .contacts {
+        &__map {
+            height: 400px;
+        }
+    }
 }
 
 @media (max-width: 790px) {
@@ -2789,6 +2828,12 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
     .electro-engineering {
         &__card-list-text {
             font-size: 16px;
+        }
+    }
+
+    .contacts {
+        &__map {
+            height: 250px;
         }
     }
 }

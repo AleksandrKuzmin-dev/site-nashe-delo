@@ -2256,6 +2256,39 @@ body::-webkit-scrollbar-thumb, .main-engineering__tabs::-webkit-scrollbar-thumb 
   color: #2B364C;
 }
 
+.contacts__wrapper {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.contacts__title {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.contacts__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.contacts__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.contacts__map {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 @media (max-width: 1300px) {
   .videonabludenie .total-fp__camera {
     width: 400px;
@@ -2489,6 +2522,9 @@ body::-webkit-scrollbar-thumb, .main-engineering__tabs::-webkit-scrollbar-thumb 
   .reviews__card-title {
     font-size: 20px;
   }
+  .contacts__map {
+    height: 400px;
+  }
 }
 @media (max-width: 790px) {
   .total-objects__cards {
@@ -2712,6 +2748,9 @@ body::-webkit-scrollbar-thumb, .main-engineering__tabs::-webkit-scrollbar-thumb 
   }
   .electro-engineering__card-list-text {
     font-size: 16px;
+  }
+  .contacts__map {
+    height: 250px;
   }
 }
 @media (max-width: 480px) {
