@@ -49,6 +49,78 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
     animation: fadeOutFromNone 1s ease-in-out;
 }
 
+.modal-consultation {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+
+    &__wrapper {
+        padding: 30px 30px 40px 30px;
+        background: #fff;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 25px;
+        color: #2B364C;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 570px;
+        align-items: center;
+    }
+
+    &__input {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 213%;
+        color: #2B364C;
+        width: 100%;
+    }
+
+    &__input::placeholder {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 213%;
+        color: #2B364C;
+    }
+
+    &__btn {
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        color: #fff;
+        background-color: #2B364C;
+        border-radius: 100px;
+        padding: 15px 30px;
+        width: 350px;
+        margin-top: 15px;
+        
+    }
+
+    &__close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+}
+
+
 .modal-gallery {
 
     position: fixed;
@@ -955,9 +1027,6 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
         flex-shrink: 0;
     }
 
-    &__list-item-icon {
-    }
-
     &__list-item-text {
         font-weight: 500;
         font-size: 18px;
@@ -1033,10 +1102,6 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
     padding: 70px 0;
     background: linear-gradient(90deg, #2b364c 0%, #242424 100%);
 
-    &__wrapper {
-
-    }
-
     &__title {
         color: #fff;
         margin-bottom: 70px;
@@ -1050,11 +1115,6 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
         grid-template-columns: 500px 1fr;
         gap: 13px;
         margin-bottom: 50px;
-    }
-
-    &__cards {
-        
-
     }
 
     &__card-title {
@@ -1221,20 +1281,8 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
         }
     }
 
-    &__splide {
-    }
-
-    &__track {
-    }
-
-    &__list {
-    }
-
     &__slide {
         padding: 0 10px;
-    }
-
-    &__slide-wrapper {
     }
 
     &__slide-img {
@@ -1383,9 +1431,6 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
         margin-bottom: 50px;
     }
 
-    &__title-wrapper {
-    }
-
     &__marker {
         font-weight: 400;
         font-size: 14px;
@@ -1428,9 +1473,6 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
 .type-signal {
     padding: 80px 0 70px 0;
     background: linear-gradient(90deg, #2b364c 0%, #242424 100%);
-
-    &__wrapper {
-    }
 
     &__title {
         color: #fff;
@@ -1525,9 +1567,6 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 30px;
         row-gap: 40px;
-    }
-
-    &__card {
     }
 
     &__card-img {
@@ -1634,10 +1673,6 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
         margin-bottom: 40px;
     }
 
-    &__top-img {
-
-    }
-
     &__top-text {
         font-weight: 400;
         font-size: 24px;
@@ -1706,9 +1741,6 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
     background: linear-gradient(90deg, #2b364c 0%, #242424 100%);
     padding: 50px 0 0 0;
 
-    &__bg {
-       
-    }
     &__wrapper {
         display: flex;
         align-items: center;
@@ -1943,9 +1975,6 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
         background-color: #2B364C;  
     }
 
-    &__card-content {
-    }
-
     &__card-title {
         font-weight: 600;
         font-size: 18px;
@@ -2100,8 +2129,6 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
 
 .reviews {
     margin-bottom: 70px;
-    &__wrapper {
-    }
 
     &__title {
         text-align: left;
@@ -2126,9 +2153,6 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
         align-items: center;
         gap: 15px;
         margin-bottom: 15px;
-    }
-
-    &__card-img {
     }
 
     &__card-title {
@@ -2455,8 +2479,7 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
             height: unset;
             display: block;
         }
-        &__content {
-        }
+
         &__img {
             width: 300px;
             right: -50px;
@@ -2570,6 +2593,25 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
 
         &__card-img {
             width: 50px;
+        }
+    }
+
+    .modal-consultation {
+        &__form {
+            width: unset;
+        }
+
+        &__btn {
+            width: 100%;
+        }
+
+        &__wrapper {
+            padding-top: 60px;
+        }
+
+        &__close {
+            top: 12px;
+            right: 12px;
         }
     }
 }
@@ -2910,8 +2952,7 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
     }
 
     .skud-why-implement {
-        &__mob-card-title-wrapper {
-        }
+
         &__mob-card-title {
             font-weight: 400;
             font-size: 14px;

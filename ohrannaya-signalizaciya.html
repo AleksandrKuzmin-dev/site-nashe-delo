@@ -476,7 +476,23 @@
         </div>
     </footer>
 
+    <section class="modal-consultation fadeOutFromNone none">
+        <div class="modal-consultation__wrapper">
+            <h2 class="modal-consultation__title">Консультация специалиста</h2>
+            <form class="modal-consultation__form" name="modal-consultation">
+                <input class="modal-consultation__input" name="name" placeholder="Ваше имя">
+                <input class="modal-consultation__input" name="phone" placeholder="Номер телефона">
+                <button class="modal-consultation__btn" type="submit">Оставить заявку</button>   
+            </form>
 
+            <button class="modal-consultation__close">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 10L28 28" stroke="#2B364C" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M28 10L10 28" stroke="#2B364C" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </section>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
@@ -484,6 +500,7 @@
     <script>
         setMobileMenu('.mobile-header__burger', '.mobile-header', 'mobile-header_show', '.mobile-header__burger-close');
         setDropDownCards('.type-signal__card', '.type-signal__card_active');
+        setModal('.total-fp__btn', '.modal-consultation', '.modal-consultation__close');
 
         const worksSlider = new Splide( '.works__splide', {
             rewind: true,

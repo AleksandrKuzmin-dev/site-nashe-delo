@@ -153,6 +153,106 @@ body::-webkit-scrollbar-thumb, .main-engineering__tabs::-webkit-scrollbar-thumb 
           animation: fadeOutFromNone 1s ease-in-out;
 }
 
+.modal-consultation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.modal-consultation__wrapper {
+  padding: 30px 30px 40px 30px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+.modal-consultation__title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #2B364C;
+}
+.modal-consultation__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  width: 570px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal-consultation__input {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 213%;
+  color: #2B364C;
+  width: 100%;
+}
+.modal-consultation__input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 213%;
+  color: #2B364C;
+}
+.modal-consultation__input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 213%;
+  color: #2B364C;
+}
+.modal-consultation__input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 213%;
+  color: #2B364C;
+}
+.modal-consultation__input::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 213%;
+  color: #2B364C;
+}
+.modal-consultation__input::placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 213%;
+  color: #2B364C;
+}
+.modal-consultation__btn {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  background-color: #2B364C;
+  border-radius: 100px;
+  padding: 15px 30px;
+  width: 350px;
+  margin-top: 15px;
+}
+.modal-consultation__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
 .modal-gallery {
   position: fixed;
   top: 0;
@@ -2567,6 +2667,19 @@ body::-webkit-scrollbar-thumb, .main-engineering__tabs::-webkit-scrollbar-thumb 
   }
   .reviews__card-img {
     width: 50px;
+  }
+  .modal-consultation__form {
+    width: unset;
+  }
+  .modal-consultation__btn {
+    width: 100%;
+  }
+  .modal-consultation__wrapper {
+    padding-top: 60px;
+  }
+  .modal-consultation__close {
+    top: 12px;
+    right: 12px;
   }
 }
 @media (max-width: 640px) {
