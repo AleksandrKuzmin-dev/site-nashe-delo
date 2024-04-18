@@ -122,6 +122,10 @@ body::-webkit-scrollbar-thumb, .main-engineering__tabs::-webkit-scrollbar-thumb 
   display: none !important;
 }
 
+.body {
+  background-color: #FBFBFB;
+}
+
 @-webkit-keyframes fadeOutFromNone {
   0% {
     opacity: 0;
@@ -2212,6 +2216,46 @@ body::-webkit-scrollbar-thumb, .main-engineering__tabs::-webkit-scrollbar-thumb 
   background-position: bottom;
 }
 
+.reviews {
+  margin-bottom: 70px;
+}
+.reviews__title {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.reviews__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.reviews__card {
+  padding: 25px 25px 40px 25px;
+  background: #fcfcfc;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.reviews__card-title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.reviews__card-title {
+  font-weight: 400;
+  font-size: 24px;
+  color: #2B364C;
+}
+.reviews__card-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 157%;
+  color: #2B364C;
+}
+
 @media (max-width: 1300px) {
   .videonabludenie .total-fp__camera {
     width: 400px;
@@ -2442,6 +2486,9 @@ body::-webkit-scrollbar-thumb, .main-engineering__tabs::-webkit-scrollbar-thumb 
   .electro-engineering__title {
     margin-bottom: 30px;
   }
+  .reviews__card-title {
+    font-size: 20px;
+  }
 }
 @media (max-width: 790px) {
   .total-objects__cards {
@@ -2475,6 +2522,15 @@ body::-webkit-scrollbar-thumb, .main-engineering__tabs::-webkit-scrollbar-thumb 
   }
   .laying-objects__title {
     margin-bottom: 30px;
+  }
+  .reviews__card-title {
+    font-size: 16px;
+  }
+  .reviews__cards {
+    grid-template-columns: 1fr;
+  }
+  .reviews__card-img {
+    width: 50px;
   }
 }
 @media (max-width: 640px) {

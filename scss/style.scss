@@ -32,6 +32,9 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
 .none {
     display: none !important;
 }
+.body {
+    background-color: #FBFBFB;
+}
 
 @keyframes fadeOutFromNone {
     0% { opacity: 0; }
@@ -2095,15 +2098,52 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
 }
 
 
+.reviews {
+    margin-bottom: 70px;
+    &__wrapper {
+    }
 
+    &__title {
+        text-align: left;
+        margin-bottom: 30px;
+    }
 
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
 
+    &__card {
+        padding: 25px 25px 40px 25px;
+        background: #fcfcfc;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
 
+    &__card-title-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
 
+    &__card-img {
+    }
 
+    &__card-title {
+        font-weight: 400;
+        font-size: 24px;
+        color: #2B364C;
+    }
 
-
-
+    &__card-text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 157%;
+        color: #2B364C;
+    }
+}
 
 
 
@@ -2424,6 +2464,12 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
             margin-bottom: 30px;
         }
     }
+
+    .reviews {
+        &__card-title {
+            font-size: 20px;
+        }
+    }
 }
 
 @media (max-width: 790px) {
@@ -2472,6 +2518,19 @@ body::-webkit-scrollbar, .main-engineering__tabs::-webkit-scrollbar{
 
         &__title {
             margin-bottom: 30px;
+        }
+    }
+    
+    .reviews {
+        &__card-title {
+            font-size: 16px;
+        }
+        &__cards {
+            grid-template-columns: 1fr;
+        }
+
+        &__card-img {
+            width: 50px;
         }
     }
 }
